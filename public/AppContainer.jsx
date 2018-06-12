@@ -5,6 +5,8 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import About from './About';
 import Home from './Home';
+import Navbar from './Navbar';
+import RegistrationView from './RegistrationView';
 
 export default class AppContainer extends Component {
     constructor(props) {
@@ -13,19 +15,13 @@ export default class AppContainer extends Component {
 
     render() {
         return <div>
-            <h2>React JS Sample</h2>
             <Router>
                 <div>
-                    <div className="row">
-                        <div className="col-sm">
-                            <Link to="/">Home</Link>
-                        </div>
-                        <div className="col-sm">
-                            <Link to="/about">About</Link>
-                        </div>
+                    <div>
+                        <Navbar/>
                     </div>
                     <Route exact path="/" render={props => {
-                        return <Home/>
+                        return <RegistrationView/>
                     }}/>
                     <Route path="/about" render={props => {
                         return <About/>

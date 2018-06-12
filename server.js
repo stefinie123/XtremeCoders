@@ -1,16 +1,6 @@
 'use strict';
 
-const express = require('express'),
-    mongoose = require('mongoose');
-
-mongoose.connect('mongodb://127.0.0.1:27017/js-sample', function (err) {
-    if (err) {
-        console.error(err);
-        process.exit(-1);
-    }
-
-    console.log('Connected to the DB');
-});
+const express = require('express');
 
 const app = express();
 
